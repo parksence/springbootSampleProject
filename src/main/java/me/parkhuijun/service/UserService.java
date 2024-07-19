@@ -78,4 +78,10 @@ public class UserService {
                 .type("Bearer")
                 .build();
     }
+
+    public String test() {
+        String password = passwordEncoder.encode("test");
+        System.out.println("password : " + password);
+        return password;
+    }
 }

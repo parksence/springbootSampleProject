@@ -51,4 +51,11 @@ public class UserController {
                 .build();
         return new ResponseEntity<>(response, HttpStatus.OK);
     }
+
+    @Operation(summary = "테스트")
+    @PostMapping("/user/test")
+    public String test() {
+        String test = userService.test();
+        return test;
+    }
 }
